@@ -1,0 +1,113 @@
+<ion-content>
+
+  <div class="screen">
+    <div class="screen__content">
+      <ion-card-header>
+        <ion-card-title>
+          CADASTRO
+        </ion-card-title>
+      </ion-card-header>
+
+      <div class="screen__background">
+        <span class="screen__background__shape screen__background__shape4"></span>
+        <span class="screen__background__shape screen__background__shape3"></span>
+        <span class="screen__background__shape screen__background__shape2"></span>
+        <span class="screen__background__shape screen__background__shape1"></span>
+      </div>
+      <ion-card-content>
+        <form [formGroup]="ValidationFormUSer" (ngSubmit)="registerUser(ValidationFormUSer.value)">
+
+          <div class="container">
+            <div class="item1">
+              <ion-input name="names" type="text" placeholder="FullName" formControlName="names">
+                <ion-icon name="person-outline"></ion-icon>
+              </ion-input>
+            </div>
+
+            <div class="item2">
+              <ion-input name="phone" type="text" placeholder="Phone No." formControlName="phone">
+                <ion-icon name="call-outline"></ion-icon>
+              </ion-input>
+            </div>
+
+            <div class="item3">
+              <ion-input name="email" type="text" placeholder="Email" formControlName="email">
+                <ion-icon name="mail-outline"></ion-icon>
+              </ion-input>
+            </div>
+
+            <div class="item4">
+              <ion-input name="password" type="password" placeholder="Senha" formControlName="password">
+                <ion-icon name="lock-closed"></ion-icon>
+              </ion-input>
+            </div>
+
+          </div>
+
+
+          <div>
+            <ng-container *ngFor="let validation of validationMessages.names">
+
+              <div class="error_message"
+                *ngIf="ValidationFormUSer.get('names').hasError(validation.type) && (ValidationFormUSer.get('names').dirty || ValidationFormUSer.get('names').touched)">
+                {{validation.message}}
+              </div>
+
+            </ng-container>
+
+          </div>
+
+
+
+
+
+          <div>
+            <ng-container *ngFor="let validation of validationMessages.phone">
+              <div class="error_message"
+                *ngIf="ValidationFormUSer.get('phone').hasError(validation.type) && (ValidationFormUSer.get('phone').dirty || ValidationFormUSer.get('phone').touched)">
+                {{validation.message}}
+              </div>
+
+            </ng-container>
+
+          </div>
+
+
+
+
+
+          <ng-container *ngFor="let validation of validationMessages.email">
+
+            <div class="error_message"
+              *ngIf="ValidationFormUSer.get('email').hasError(validation.type) && (ValidationFormUSer.get('email').dirty || ValidationFormUSer.get('email').touched)">
+              {{validation.message}}
+            </div>
+
+          </ng-container>
+
+
+
+
+
+          <ng-container *ngFor="let validation of validationMessages.password">
+
+            <div class="error_message"
+              *ngIf="ValidationFormUSer.get('password').hasError(validation.type) && (ValidationFormUSer.get('password').dirty || ValidationFormUSer.get('password').touched)">
+              {{validation.message}}
+            </div>
+
+          </ng-container>
+
+          <div class="signin-btns">
+            <button type="submit" class="sign-btn" [disabled]="!ValidationFormUSer.valid">Sign Up</button>
+          </div>
+        </form>
+
+      </ion-card-content>
+
+    </div>
+  </div>
+
+
+
+</ion-content>

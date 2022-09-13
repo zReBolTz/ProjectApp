@@ -1,0 +1,129 @@
+ion-content{
+	--ion-background-color: linear-gradient(to right top, #009fc6, #0075a9, #0075a9, #2b4c7e, #2b4c7e);
+  }
+  
+  .screen__background__shape {
+	  transform: rotate(78deg);
+	  position: absolute;
+  }
+  
+  .screen__background__shape1 {
+	  height: 820px;
+	  width: 520px;
+	  background: rgb(255, 255, 255);	
+	  top: 150px;
+	  right: 150px;	
+	  border-radius: 72px 72px 72px 72px;
+  }
+  
+  .screen__background__shape2 {
+	  height: 220px;
+	  width: 220px;
+	  background: #0075a9;	
+	  top: -172px;
+	  right: 0;	
+	  border-radius: 32px;
+  }
+  
+  .screen__background__shape3 {
+	  height: 820px;
+	  width: 520px;
+	  background: #0076a93d;	
+	  right: 150px;	
+	  border-radius: 72px 72px 72px 72px;
+  }
+  
+  
+  ion-card-title{
+   font-family: Bahnschrift SemiBold;
+   color: white;
+   font-size: 35px;
+   text-align: center;
+  top: 70px;
+  }
+  
+  ion-card-subtitle{
+	color: white;
+	font-family: Bahnschrift SemiBold;
+	text-align: center;
+	top: 78px;
+	font-size: 20px;
+  }
+  
+ 
+  
+  .email{
+   border-radius: 10px;
+   height: 40px;
+   width: 290px;
+   background-color: white;
+   color: black;
+   box-shadow: 5px 5px  rgba(0, 0, 0, 0.212);
+  }
+  
+  .senha{
+	border-radius: 10px;
+   height: 40px;
+   width: 290px;
+   background-color: white;
+   color: black;
+   box-shadow: 5px 5px  rgba(0, 0, 0, 0.212);
+  }
+
+  input{
+	border-radius: 10px;
+   background-color: white;
+   color: black;
+   box-shadow: 5px 5px  rgba(0, 0, 0, 0.212);
+  }
+
+  
+  input{
+	height: 40px;
+	width: 290px;
+	
+  }
+ 
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65%;
+    
+  }
+
+  ion-input{
+    border-radius: 10px;
+    height: 40px;
+    width: 290px;
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px 5px 5px  rgba(0, 0, 0, 0.212);
+    
+  }
+
+  .sign-btn{
+  margin-top: 20px;
+text-align: center;
+ background-color: #2b4c7e;
+ width: 200px;
+ height: 45px;
+ color: rgb(255, 255, 255);
+ border-radius: 20px;
+
+  }
+
+  .signin-btns{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 30%;
+    margin-top: 20px;
+  //   left: 140px;
+    gap: 20px;
+    align-items: center;
+    
+  }
+  

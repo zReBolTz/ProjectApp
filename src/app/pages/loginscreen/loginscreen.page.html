@@ -1,0 +1,62 @@
+<ion-content>
+  <div class="container">
+        <ion-card-header>
+          <ion-card-title>
+            LOGIN
+          </ion-card-title>
+        </ion-card-header>
+
+         
+  
+     
+      <div class="screen__background">
+        <span class="screen__background__shape screen__background__shape4"></span>
+        <span class="screen__background__shape screen__background__shape3"></span>		
+        <span class="screen__background__shape screen__background__shape2"></span>
+        <span class="screen__background__shape screen__background__shape1"> </span>
+           <div class="signin-btns">
+              <ion-card-content>
+               
+                <form [formGroup]="validationFormUser" (ngSubmit)="LoginUser(validationFormUser.value)">
+                  <div class="icon">
+                  <ion-input class="email"type="text" name="email" formControlName="email"  placeholder="Email">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </ion-input>
+                </div>
+                  <div>
+                    <ng-container *ngFor="let validation of validationUserMessage.email">
+                          <div class="error_message" *ngIf="validationFormUser.get('email').hasError(validation.type) && (validationFormUser.get('email').dirty || validationFormUser.get('email').touched)">
+                             {{validation.message}}
+                          </div>
+                    </ng-container>
+                </div>
+                <br>
+
+                <ion-input class="senha" type="password" name="password" formControlName="password"  placeholder="Senha" >
+                <ion-icon name="lock-closed"></ion-icon>
+              </ion-input>
+                  <div>
+                    <ng-container *ngFor="let validation of validationUserMessage.password">
+                         <div class="error_message" *ngIf="validationFormUser.get('password').hasError(validation.type) && (validationFormUser.get('password').dirty || validationFormUser.get('password').touched)">
+                            {{validation.message}}
+                         </div>
+                     </ng-container>
+                </div>
+                <div class="password_forgot">
+                  <ion-button fill="clear" class="ion-no-padding">Esqueceu a Senha?</ion-button>
+               </div>
+               <div class="sign-btn-wrap">
+                  <ion-button   type="submit"  fill="solid" class="sign-btn-wrap" [disabled]="!validationFormUser.valid" >Login</ion-button>
+                 </div>
+  
+                  </form>
+                
+                </ion-card-content>
+                
+        </div>
+      
+       
+
+      </div>		
+    </div>
+</ion-content>
